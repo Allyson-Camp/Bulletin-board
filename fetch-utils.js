@@ -41,15 +41,20 @@ export function renderPosts(post) {
     const postEl = document.createElement('div');
     const titleEl = document.createElement('p');
     const messageEl = document.createElement('p');
+    const contactEl = document.createElement('p');
 
-    messageEl.textContent = post.message;
     titleEl.textContent = post.title;
+    messageEl.textContent = post.message;
+    contactEl.textContent = post.contact;
+    
 
     postEl.classList.add('single-post');
-    messageEl.classList.add('post-message');
     titleEl.classList.add('post-title');
+    messageEl.classList.add('post-message');
+    contactEl.classList.add('contact-info');
+    
     //append div to html el in dom 
-    postEl.append(messageEl, titleEl);
+    postEl.append(titleEl, messageEl, contactEl);
     //return the div
     return postEl;
     

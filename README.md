@@ -36,72 +36,72 @@ Additional considerations:
 
 ## home events
 
-- page load
-  - check if user logged in. if logged in, change to 'logout' buton
-  - Fetch, Loop, pass Object to Render, Append posts
-- click login button
-  - redirect to auth page (sign in page)
-- click log out button
-  - log user out, change text on button to login again
-- click create button
-  - redirect to create page
+-   page load
+    -   check if user logged in. if logged in, change to 'logout' buton
+    -   Fetch, Loop, pass Object to Render, Append posts
+-   click login button
+    -   redirect to auth page (sign in page)
+-   click log out button
+    -   log user out, change text on button to login again
+-   click create button
+    -   redirect to create page
 
 ## data model
 
-- what is in a post?
-  - topic: string
-  - contact info: string
-  - message: string
+-   what is in a post?
+    -   topic: string
+    -   contact info: string
+    -   message: string
 
 ## auth page
 
-- 2 forms: sign in/up
+-   2 forms: sign in/up
 
 ## auth page events
 
-- on load, check if user is logged in, if so - redirect to home page
-- submit sign in form
-  - get user input from form (email/password)
-  - call signIn auth function w/ email/password
-  - redirect to home page
-- submit sign up form
-  - get user input from form (email/password)
-  - call signUp auth function w/ email/password
-  - redirect to home page
+-   on load, check if user is logged in, if so - redirect to home page
+-   submit sign in form
+    -   get user input from form (email/password)
+    -   call signIn auth function w/ email/password
+    -   redirect to home page
+-   submit sign up form
+    -   get user input from form (email/password)
+    -   call signUp auth function w/ email/password
+    -   redirect to home page
 
 ## create page
 
-- create post form
+-   create post form
 
 ## events
 
-- on load if user is logged in- redirect to home page
-- on submit
-  - get data from form
-  - create post insupabase using form data
-  - redirect to home page so they will see the post
+-   on load if user is logged in- redirect to home page
+-   on submit
+    -   get data from form
+    -   create post insupabase using form data
+    -   redirect to home page so they will see the post
 
 ## slices
+
 user should be able to:
 
-- see list of posts on load
-- go to auth page and log in
-- home page to indicate if user is logged in by changing button text to log in/out
-- user shouldnt be ale to go to create page if not logged in
-- user shouldnut be able to visit auth pg if logged in
-- logged in user hsould be ablet o visit create page and make post on submit
-    - sent ot home page on submit and post is there 
-
+-   see list of posts on load
+-   go to auth page and log in
+-   home page to indicate if user is logged in by changing button text to log in/out
+-   user shouldnt be ale to go to create page if not logged in
+-   user shouldnut be able to visit auth pg if logged in
+-   logged in user hsould be ablet o visit create page and make post on submit
+    -   sent ot home page on submit and post is there
 
 need auth, create, and main pages!
-- auth.js and create.js and app.js
-- 3 different HTML connected to their .js files
 
+-   auth.js and create.js and app.js
+-   3 different HTML connected to their .js files
 
 to switch to another page in event listener:
 
 buttonElName.addeventlistener('click', () => {
-    
+
     window.location.href = './nameOfOtherPage';
 
 });
