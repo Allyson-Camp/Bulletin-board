@@ -5,8 +5,11 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getPosts() {
     let { data: posts, error } = await client
-    .from('posts')
-    .select('*');
+        .from('posts')
+        .select('*'); 
+    if (error) console.error(error);
+
+    return posts;
 }
 
 export async function signIn(email, password) {
@@ -33,4 +36,21 @@ export async function checkAuth() {
     //
 }
 
+export function renderPosts(post) {
+        //render div for each post (render function)
+    const postEl = document.createElement('div');
+    const titleEl = document.createElement('p');
+    const messageEl = document.createElement('p');
 
+    messageEl.textContent = post.message;
+    titleEl.textContent = post.title;
+
+    postEl.classList.add('single-post');
+    messageEl.classList.add('post-message');
+    titleEl.classList.add('post-title');
+    //append div to html el in dom 
+    postEl.append(messageEl, titleEl);
+    //return the div
+    return postEl;
+    
+}
