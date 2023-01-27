@@ -1,3 +1,5 @@
+![wireframe for bulletin-board](./assets/wireframe.png)
+
 ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
