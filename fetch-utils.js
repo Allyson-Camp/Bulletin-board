@@ -32,10 +32,6 @@ export async function signUp(email, password) {
     return data;
 }
 
-export async function checkAuth() {
-    //
-}
-
 export function renderPosts(post) {
         //render div for each post (render function)
     const postEl = document.createElement('div');
@@ -60,7 +56,6 @@ export function renderPosts(post) {
     
 }
 
-
 export async function createPost(title, message, contact) {
     const { data, error } = await client 
         .from('posts')
@@ -70,4 +65,21 @@ export async function createPost(title, message, contact) {
                 contact: contact },
         ]);
     return data;
+}
+
+//get user function
+export function getUser() {
+
+    return client.auth.session() && client.auth.session().user;
+
+}
+
+export async function checkAuth() {
+    const user = await getUser();
+    if (!user) location.replace('../auth');
+}
+
+export async function redirectIfLoggedIn() {
+    const user = await getUser();
+    if (user) location.replace('../');
 }

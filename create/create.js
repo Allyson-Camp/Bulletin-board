@@ -1,5 +1,5 @@
 //imports
-import { createPost } from '../fetch-utils.js'; 
+import { createPost checkAuth } from '../fetch-utils.js'; 
 
 
 //dom els
@@ -17,7 +17,7 @@ createFormEl.addEventListener('submit', async (e) => {
     const contact = data.get('contact');
     
 
-    const post = await createPost(title, message, contact);
+    await createPost(title, message, contact);
     location.replace('/'); 
 });
 
