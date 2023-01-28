@@ -20,6 +20,7 @@ window.addEventListener('load', async () => {
 loginButtonEl.addEventListener('click', () =>{
     window.location.href = '../auth';
     //change button name to sign out once logged in
+    //if statement, textcontent
 });
 
 createButtonEl.addEventListener('click', () =>{

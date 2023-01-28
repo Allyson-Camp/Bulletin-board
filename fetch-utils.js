@@ -13,23 +13,23 @@ export async function getPosts() {
 }
 
 export async function signIn(email, password) {
-    const { data, error } = await client.auth.signIn({
+    const { user, error } = await client.auth.signIn({
         email: email,
         password: password,
     });
 
     if (error) console.error(error);
-    return data;
+    return user;
 }
 
 export async function signUp(email, password) {
-    const { data, error } = await client.auth.signUp({
+    const { user, error } = await client.auth.signUp({
         email: email,
         password: password,
     });
 
     if (error) console.error(error);
-    return data;
+    return user;
 }
 
 export function renderPosts(post) {

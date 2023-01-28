@@ -1,5 +1,5 @@
 //imports
-import { createPost checkAuth } from '../fetch-utils.js'; 
+import { createPost, checkAuth } from '../fetch-utils.js'; 
 
 
 //dom els
