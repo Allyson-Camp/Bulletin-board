@@ -59,3 +59,15 @@ export function renderPosts(post) {
     return postEl;
     
 }
+
+
+export async function createPost(title, message, contact) {
+    const { data, error } = await client 
+        .from('posts')
+        .insert([
+            { title: title,
+                message: message,
+                contact: contact },
+        ]);
+    return data;
+}

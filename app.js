@@ -17,6 +17,16 @@ window.addEventListener('load', async () => {
     displayPosts();
 });
 
+loginButtonEl.addEventListener('click', () =>{
+    window.location.href = '../auth';
+    //change button name to sign out once logged in
+});
+
+createButtonEl.addEventListener('click', () =>{
+    window.location.href = '../create';
+    //redirect to auth page if not logged in
+});
+
 
 /* Display Functions */
 function displayPosts(){

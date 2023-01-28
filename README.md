@@ -78,8 +78,10 @@ Additional considerations:
 -   on load if user is logged in- redirect to home page
 -   on submit
     -   get data from form
+    -   when user clicks figure out what they typed on click
     -   create post insupabase using form data
     -   redirect to home page so they will see the post
+    - 
 
 ## slices
 
