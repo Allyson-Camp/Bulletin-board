@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- title and favicon -->
-    <title>The Board</title>
+    <title>Your post</title>
     <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
     <!-- js -->
@@ -16,26 +16,35 @@
     defer
     src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
 ></script>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="create.js"></script>
 
     <!-- fonts -->
     <!-- see https://fonts.google.com/ -->
 
     <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="./create.css" />
     <!-- add link for page specific css -->
 
 </head>
 
 <body>
     <header>
-        <h1>Welcome to The Board!</h1>
-        <button class="login-button">Login</button>
-        <button class="create-button">Create</button>
+        <h1>Create Post</h1>
+        <a href="../">Home</a>
     </header>
 
-    <main class="posts-list">
+    <main>
+        <form class="create-form">
+            <h3>What's on your mind?</h3>
+            <p>Post title</p>
+            <input name="title"></input>
+            <p>Post message</p>
+            <input name="message"></input>
+            <p>Contact information</p>
+            <input name="contact"></input>
+            <button class="post-button">Submit</button>
+        </form>
     </main>
 
 </body>

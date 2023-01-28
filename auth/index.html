@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title and favicon -->
+    <title>Sign In</title>
+    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+
+    <!-- js -->
+    <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+></script>
+    <script type="module" src="auth.js"></script>
+
+    <!-- fonts -->
+    <!-- see https://fonts.google.com/ -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./auth.css" />
+    <!-- add link for page specific css -->
+
+</head>
+
+<body>
+    <header>
+        <h1>Please sign in to view posts</h1>
+    </header>
+
+    <main>
+
+        <form class="sign-in">
+            <h3>Sign In</h3>
+            <p>Email</p>
+            <input name="email"/>
+            <p>Password</p>
+            <input name="password"/>
+            <button class="sign-in-button">Sign in</button>
+        </form>
+
+
+        <form class="sign-up">
+            <h2>New? Join The Board today!</h2>
+            <h3>Sign up</h3>
+            <p>Email</p>
+            <input name="email"/>
+            <p>Password</p>
+            <input name="password"/>
+            <button class="sign-up-button">Sign up</button>
+        </form>
+
+    </main>
+
+</body>
+
+</html>

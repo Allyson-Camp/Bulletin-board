@@ -32,28 +32,5 @@ header .logo {
 
 main {
     padding: 20px;
+    
 }
-
-button {
-    height: 30px;
-    width: 100px;
-}
-
-.single-post {
-    background-color: rgb(249, 201, 208);
-    width: 220px;
-    text-align: center;
-    border:rgba(0, 0, 0, 0.24)
-    //shadow??
-}
-
-.post-title {
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.post-message {
-    font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
